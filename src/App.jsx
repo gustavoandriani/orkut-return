@@ -33,7 +33,7 @@ export default function App() {
             <section id="profile">
                 <div id="profileCard">
                     <div className="profileCardTop">
-                        <h3>Gustavo José Andriani</h3>
+                        <h3>Perfil</h3>
                     </div>
                 </div>
             </section>
@@ -46,7 +46,7 @@ export default function App() {
 
             <section id="others">
                 <div className="communitys">
-                    <h3>Comunidades do ORKUT</h3>
+                    <h3>Comunidades e Jogos</h3>
                 </div>
             </section>
         </main>
