@@ -1,0 +1,109 @@
+* {
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 1rem 5rem;
+}
+
+div.brand {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  place-content: center;
+}
+
+h1.brandTitle {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #eb1feb;
+}
+
+header {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav#navBar {
+  width: fit-content;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: #ccc;
+  border-radius: 50px;
+}
+
+nav#navBar div.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 .5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+}
+
+nav#navBar div.navItem:hover {
+  cursor: pointer;
+  background-color: #eb1feb;
+  transform: scale(1.1);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+}
+
+section#profile {
+  background-color: #eb1feb;
+}
+
+section#profile div#profileCard {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+section#content {
+  background-color: rgb(12, 102, 180);
+}
+
+section#content div#contentPost {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+section#others {
+  background-color: rgb(21, 206, 61);
+}
+
+section#others  div.communitys {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
