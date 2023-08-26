@@ -18,7 +18,7 @@ div.brand {
 }
 
 h1.brandTitle {
-  font-family: Ubuntu;
+  font-family: Ubuntu, "sans-serif";
   font-weight: 700;
   font-size: 2rem;
   color: #eb1feb;
@@ -88,17 +88,13 @@ section#profile div#profileCard {
   margin: 0 auto;
 }
 
-section#content {
-  background-color: rgb(12, 102, 180);
-}
-
 section#content div#contentPost {
   width: 95%;
   height: 100%;
   margin: 0 auto;
 }
 
-section#content div#contentPost div {
+section#content div#contentPost form {
   display: grid;
   grid-template-columns: 90% 10%;
   background-color: #ccc;
@@ -106,23 +102,24 @@ section#content div#contentPost div {
   border-radius: 30px;
 }
 
-section#content div#contentPost div textarea {
+section#content div#contentPost form textarea {
   box-sizing: border-box;
   border-radius: 30px 0 0 30px;
   padding: 0 1rem;
+  line-height: 2rem;
 }
 
-section#content div#contentPost div button {
+section#content div#contentPost form button {
   padding: 0.7rem;
   border-radius: 0 30px 30px 0;
 }
 
-section#content div#contentPost div textarea,
-section#content div#contentPost div button,
-section#content div#contentPost div textarea:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
+section#content div#contentPost form textarea,
+section#content div#contentPost form button,
+section#content div#contentPost form textarea:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 }
 
 section#others {
@@ -133,4 +130,20 @@ section#others  div.communitys {
   width: 90%;
   height: 100%;
   margin: 0 auto;
+}
+
+div.postItem {
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  min-height: 5rem;
+  padding: 1rem;
+  background-color: #ccc;
+  display: flex;
+  margin: .5rem 0;
+  border-radius: 15px;
+}
+
+div.postItem span {
+  font-size: .7rem;
 }

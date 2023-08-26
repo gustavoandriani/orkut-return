@@ -2,8 +2,25 @@ import "./index.css"
 import iconFriends from "./assets/friends.svg"
 import iconCommunity from "./assets/community.svg"
 import iconGames from "./assets/games.svg"
+import { useState } from "react"
 
 export default function App() {
+    const [ textPost, setTextPost ] = useState("")
+    const [ listPosts, setListPosts ] = useState([])
+
+    const postSubmit = (ev) => {
+        ev.preventDefault()
+
+        const newPost = {
+            id: Math.floor(Math.random() * 1000000),
+            textPost: textPost,
+            postedAt: new Date()
+        }
+
+        setListPosts((state) => [newPost, ...state])
+        setTextPost("")
+    }
+
     return (
     <>
         <header>
@@ -40,10 +57,37 @@ export default function App() {
 
             <section id="content">
                 <div id="contentPost">
-                    <h4>Publicação</h4>
-                    <div>
-                        <textarea name="createPost" id="createPost" rows="2"></textarea>
-                        <button>Publicar</button>
+                    <form onSubmit={postSubmit}>
+                        <textarea
+                            name="createPost"
+                            id="createPost"
+                            rows="1"
+                            required
+                            value={textPost}
+                            onChange={(ev) => setTextPost(ev.target.value)}
+                        >
+                            
+                        </textarea>
+                        <button type="submit">Publicar</button>
+                    </form>
+
+                    <div id="listPosts">
+                        {listPosts.length > 0 ? (listPosts.map((post) => (
+                            <div className="postItem" key={post.id}>
+                                <h4>Gustavo Andriani</h4>
+                                <span>Publicado em {post.postedAt.toLocaleString()}</span>
+                                <br />
+                                <p>{post.textPost}</p>
+                            </div>
+                        ))
+                        ) : 
+                        <div className="postItem" style={{textAlign: "center", placeContent: "center"}}>
+                            <p>Nada para mostrar no feed de noticias!</p>
+                        </div>
+                    }
+
+
+                            
                     </div>
                 </div>
             </section>
