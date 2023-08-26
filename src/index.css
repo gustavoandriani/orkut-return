@@ -98,6 +98,33 @@ section#content div#contentPost {
   margin: 0 auto;
 }
 
+section#content div#contentPost div {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  background-color: #ccc;
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+section#content div#contentPost div textarea {
+  box-sizing: border-box;
+  border-radius: 30px 0 0 30px;
+  padding: 0 1rem;
+}
+
+section#content div#contentPost div button {
+  padding: 0.7rem;
+  border-radius: 0 30px 30px 0;
+}
+
+section#content div#contentPost div textarea,
+section#content div#contentPost div button,
+section#content div#contentPost div textarea:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
 section#others {
   background-color: rgb(21, 206, 61);
 }

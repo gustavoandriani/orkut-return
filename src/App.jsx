@@ -41,6 +41,10 @@ export default function App() {
             <section id="content">
                 <div id="contentPost">
                     <h4>Publicação</h4>
+                    <div>
+                        <textarea name="createPost" id="createPost" rows="2"></textarea>
+                        <button>Publicar</button>
+                    </div>
                 </div>
             </section>
 
@@ -51,7 +55,6 @@ export default function App() {
             </section>
         </main>
     </>
-
 
     )
 }
