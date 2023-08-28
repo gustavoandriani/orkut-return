@@ -1,4 +1,5 @@
 import "./index.css"
+import CreateButton from "./components/CreateButton"
 import iconFriends from "./assets/friends.svg"
 import iconCommunity from "./assets/community.svg"
 import iconGames from "./assets/games.svg"
@@ -19,6 +20,11 @@ export default function App() {
 
         setListPosts((state) => [newPost, ...state])
         setTextPost("")
+    }
+
+    const enterPostSubmit = (ev) => {
+        ev.preventDefault()
+        document.getElementById("buttonPostSubmit").click()
     }
 
     return (
@@ -59,16 +65,18 @@ export default function App() {
                 <div id="contentPost">
                     <form onSubmit={postSubmit}>
                         <textarea
+                            placeholder="Você está pensando em que?"
                             name="createPost"
                             id="createPost"
                             rows="1"
                             required
                             value={textPost}
                             onChange={(ev) => setTextPost(ev.target.value)}
+                            onKeyDown={(ev) => ev.key === "Enter" ? enterPostSubmit(ev) : null}
                         >
                             
                         </textarea>
-                        <button type="submit">Publicar</button>
+                        <button id="buttonPostSubmit" type="submit">Publicar</button>
                     </form>
 
                     <div id="listPosts">
@@ -85,16 +93,21 @@ export default function App() {
                             <p>Nada para mostrar no feed de noticias!</p>
                         </div>
                     }
-
-
-                            
                     </div>
                 </div>
             </section>
 
             <section id="others">
                 <div className="communitys">
-                    <h3>Comunidades e Jogos</h3>
+                    <h3>Comunidades</h3>
+                    <hr />
+                    <CreateButton texto={"Criar comunidade"} />
+                </div>
+
+                <div className="games">
+                    <h3>Jogos</h3>
+                    <hr />
+                    <CreateButton texto={"Descobrir jogos"} />
                 </div>
             </section>
         </main>

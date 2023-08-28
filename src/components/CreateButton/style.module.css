@@ -1,0 +1,15 @@
+.createButton {
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    transition: .5s ease-in-out;
+    background-image: url("../../assets/plusIcon.svg");
+    background-size: cover;
+    color: transparent;
+}
+
+.createButton:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
