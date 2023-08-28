@@ -6,10 +6,19 @@
     transition: .5s ease-in-out;
     background-image: url("../../assets/plusIcon.svg");
     background-size: cover;
-    color: transparent;
+    margin: 0 .5rem;
 }
 
 .createButton:hover {
     cursor: pointer;
     background-color: #ccc;
+}
+
+.createButton p {
+    text-transform: uppercase;
+    position: relative;
+    bottom: -3rem;
+    text-align: center;
+    max-height: 1rem;
+    max-width: 1rem;
 }

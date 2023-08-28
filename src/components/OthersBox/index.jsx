@@ -1,9 +1,9 @@
 import styles from "./style.module.css"
 
-export default function OthersBox() {
+export default function OthersBox({ titulo, boxIcon }) {
     return (
-        <button className={styles.createButton}>
-            {texto}
+        <button style={{ backgroundImage: `url(${boxIcon})` }} className={styles.othersItemBox}>
+            <p>{titulo}</p>
         </button>
     )
 }

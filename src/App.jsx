@@ -1,9 +1,19 @@
 import "./index.css"
 import CreateButton from "./components/CreateButton"
+
 import iconFriends from "./assets/friends.svg"
 import iconCommunity from "./assets/community.svg"
 import iconGames from "./assets/games.svg"
+
+import iconHappyFarm from "./assets/happyFarmIcon.svg"
+import iconCafeMania from "./assets/cafeManiaIcon.svg"
+
+import iconAndroid from "./assets/iconAndroid.svg"
+import iconAmazon from "./assets/iconAmazon.svg"
+import iconShopify from "./assets/iconShopify.svg"
+
 import { useState } from "react"
+import OthersBox from "./components/OthersBox"
 
 export default function App() {
     const [ textPost, setTextPost ] = useState("")
@@ -102,12 +112,20 @@ export default function App() {
                     <h3>Comunidades</h3>
                     <hr />
                     <CreateButton texto={"Criar comunidade"} />
+
+                    <OthersBox titulo={"Dicas de Android"} boxIcon={iconAndroid}/>
+                    <OthersBox titulo={"Promos da Amazon"} boxIcon={iconAmazon}/>
+                    <OthersBox titulo={"Mestres do Drop"} boxIcon={iconShopify}/>
                 </div>
 
                 <div className="games">
                     <h3>Jogos</h3>
                     <hr />
-                    <CreateButton texto={"Descobrir jogos"} />
+                    <CreateButton texto={"Descobrir jogos"}/>
+
+                    <OthersBox titulo={"Colheita Feliz"} boxIcon={iconHappyFarm}/>
+                    <OthersBox titulo={"Café Mania"} boxIcon={iconCafeMania}/>
+                    
                 </div>
             </section>
         </main>

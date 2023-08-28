@@ -1,15 +1,25 @@
-.createButton {
+.othersItemBox {
+    box-sizing: border-box;
     width: 70px;
     height: 70px;
-    background-color: transparent;
-    border: none;
-    transition: .5s ease-in-out;
-    background-image: url("../../assets/plusIcon.svg");
+    border: 4px solid #d32fd3;
+    border-radius: 10px;
+    margin: 0 .5rem;
+    margin-bottom: 2.8rem;
+    transition: .3s ease-in-out;
+    background-position: center;
     background-size: cover;
-    color: transparent;
 }
 
-.createButton:hover {
+.othersItemBox p {
+    text-transform: uppercase;
+    position: relative;
+    bottom: -3rem;
+    text-align: center;
+    max-height: 1rem;
+}
+
+.othersItemBox:hover {
     cursor: pointer;
-    background-color: #ccc;
+    background-color: #d32fd3;
 }
