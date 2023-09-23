@@ -1,9 +1,11 @@
 import "./index.css"
+import "./media-queries.css"
 import CreateButton from "./components/CreateButton"
 
 import iconFriends from "./assets/friends.svg"
 import iconCommunity from "./assets/community.svg"
 import iconGames from "./assets/games.svg"
+import iconProfile from "./assets/iconProfile.svg"
 
 import iconHappyFarm from "./assets/happyFarmIcon.svg"
 import iconCafeMania from "./assets/cafeManiaIcon.svg"
@@ -59,6 +61,11 @@ export default function App() {
                     <img src={iconGames} width={36} height={36}/>
                     
                 </div>
+
+                <div className="navItem">
+                    <img src={iconProfile} width={36} height={36}/>
+                    
+                </div>
             </nav>
         </header>
 
@@ -66,7 +73,19 @@ export default function App() {
             <section id="profile">
                 <div id="profileCard">
                     <div className="profileCardTop">
-                        <h3>Perfil</h3>
+                        <img src="https://images4.wikia.nocookie.net/__cb20130615215215/youtubepoopbr/images/thumb/c/c2/Kenny.jpg/180px-Kenny.jpg" width={180} height={180}/>
+                        <h3>Username</h3>
+                        <small>Idade, gênero e sexualidade</small>
+
+                    </div>
+
+                    <div>
+                        <ul className="profileCardList">
+                            <li>Meu perfil</li>
+                            <li>Lista de amigos</li>
+                            <li>Depoimentos</li>
+                            <li>Galeria</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -92,7 +111,7 @@ export default function App() {
                     <div id="listPosts">
                         {listPosts.length > 0 ? (listPosts.map((post) => (
                             <div className="postItem" key={post.id}>
-                                <h4>Gustavo Andriani</h4>
+                                <h4>{"User" + post.id}</h4>
                                 <span>Publicado em {post.postedAt.toLocaleString()}</span>
                                 <br />
                                 <p>{post.textPost}</p>

@@ -1,0 +1,73 @@
+@media screen and (min-width: 768px) {
+    header>nav#navBar {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main>section#profile,
+    main>section#others {
+        display: none;
+    }
+
+    main {
+       grid-template-columns: 100%; 
+    }
+
+    main>section#content>div#contentPost {
+        width: 100%;
+    }
+    main>section#content>div#contentPost>form {
+        grid-template-columns: 80% 20%;
+    }
+
+    main>section#content>div#contentPost>form>textarea {
+        line-height: 3rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        margin: 0;
+    }
+
+    header>nav#navBar {
+        width: 100%;
+        border-radius: 0;
+        bottom: -2.5rem;
+        padding: 1rem 2rem;
+    }
+
+    header>nav#navBar>div.navItem {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    header>nav#navBar>div.navItem:hover{
+        transform: scale(1.4);
+        background-color: transparent;
+    }
+
+    main>section#content>div#contentPost>form {
+        border-radius: 0;
+        grid-template-columns: 70% 30%;
+        background-color: transparent;
+        padding: .5rem;
+    }
+    
+    main>section#content>div#contentPost>form>textarea {
+        padding: 0 0 0 1rem;
+    }
+
+    main>section#content>div#contentPost>form>textarea,
+    main>section#content>div#contentPost>form>textarea:focus,
+    main>section#content>div#contentPost>form>button {
+        border: 2px solid #ccc;
+    }
+
+    main>section#content>div#contentPost>div#listPosts>div.postItem {
+        border-radius: 0;
+        background: transparent;
+        border-bottom: 1px solid #eb1feb;
+    }
+}
