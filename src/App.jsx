@@ -79,14 +79,13 @@ export default function App() {
 
                     </div>
 
-                    <div>
-                        <ul className="profileCardList">
-                            <li>Meu perfil</li>
-                            <li>Lista de amigos</li>
-                            <li>Depoimentos</li>
-                            <li>Galeria</li>
-                        </ul>
-                    </div>
+                    <ul className="profileCardList">
+                        <li>Meu perfil</li>
+                        <li>Lista de amigos</li>
+                        <li>Depoimentos</li>
+                        <li>Galeria</li>
+                    </ul>
+                    
                 </div>
             </section>
 

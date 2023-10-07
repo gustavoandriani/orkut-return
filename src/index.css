@@ -82,47 +82,66 @@ section {
 }
 
 section#profile {
-  background-color: transparent;
+  background-color: #96969665;
+  border-radius: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: fit-content;
 }
 
 section#profile div#profileCard {
-  width: 90%;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
 section#profile div#profileCard div.profileCardTop {
+  width: 100%;
   text-align: center;
-  border-bottom: 2px solid #eb1feb;
   padding-bottom: .5rem;
 }
 
 section#profile div#profileCard div.profileCardTop img {
-  border-radius: 30px;
-  border: 4px solid #eb1feb;
+  border-radius: 50%;
   margin-bottom: .5rem;
+  border: 3px solid #d126d1;
+  transition: .4s ease-in-out;
 }
 
-section#profile div#profileCard div>ul.profileCardList {
+section#profile div#profileCard div.profileCardTop img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+section#profile div#profileCard ul.profileCardList {
+  width: 100%;
   list-style-type: none;
   line-height: 2.5rem;
-  font-size: 1.25rem;
-  letter-spacing: .2rem;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-section#profile div#profileCard div>ul.profileCardList>li {
-  width: 100%;
-  border-bottom: 1px solid #eb1feb;
-  padding: 0.3rem;
+section#profile div#profileCard ul.profileCardList>li {
+  background-color: #ff2dc07a;
+  width: 50%;
   transition: .25s ease-in-out;
+  padding: 0 20px;
+  border-radius: 30px;
+  margin-bottom: 8px;
+  text-align: center;
+  transition: .3s ease-in-out;
 }
 
-section#profile div#profileCard div>ul.profileCardList>li:hover {
+section#profile div#profileCard ul.profileCardList>li:hover {
   cursor: pointer;
-  background-color: #ccc;
+  background-color: #ff2dc0;
 }
 
 section#content div#contentPost {
