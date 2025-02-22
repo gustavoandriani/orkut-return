@@ -73,7 +73,7 @@ export default function App() {
             <section id="profile">
                 <div id="profileCard">
                     <div className="profileCardTop">
-                        <img src="https://images4.wikia.nocookie.net/__cb20130615215215/youtubepoopbr/images/thumb/c/c2/Kenny.jpg/180px-Kenny.jpg" width={180} height={180}/>
+                        <img src="https://picsum.photos/200" width={180} height={180}/>
                         <h3>Username</h3>
                         <small>Idade, gênero e sexualidade</small>
 
